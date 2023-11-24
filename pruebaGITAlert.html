@@ -16,7 +16,20 @@
         <p>Ingresa el estado de la bandera: </p>
         <input type="text" onkeypress="validar(event)" id="caja">
     </div>
+    
+    <script>
+        function validar(e){
+            tecla = e.keyCode;
+            if (tecla=='13'){
+                if (document.getElementById("caja").value== "true")
+                    swal("Correcto!", " Dato correcto" , "success");
+                else
+                    swal("Incorrecto!", " Dato incorrecto" , "error");
+                document.getElementById("caja").value=="";
  
+            }
+        }
+    </script>
 
 </body>
 </html>
